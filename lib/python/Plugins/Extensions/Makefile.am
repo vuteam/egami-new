@@ -1,0 +1,13 @@
+installdir = $(pkglibdir)/python/Plugins/Extensions
+
+SUBDIRS = OpenIPTV TuxboxPlugins CutListEditor PicturePlayer MediaScanner MediaPlayer SocketMMI DVDBurn Modem Volume_adjust ProgrammlistenUpdater RemoteStreamConvert
+
+if HAVE_LIBDDVD
+SUBDIRS += DVDPlayer
+endif
+
+if VUSOLO4K
+SUBDIRS += MiniTV
+endif
+
+install_PYTHON = __init__.py
